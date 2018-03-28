@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm   navbar-dark bg-info sticky-top">
+  <a class="navbar-brand" href="#" (mousemove)="editColorMagic= true" (mouseleave)="editColorMagic=false">
+    <i class="fa fa-magic fa-lg fa-fw" [ngClass]="editColorMagic?'text-warning':'text-primary'"></i>
+    SHadows-chatings
+    <i class="fa fa-magic fa-lg fa-fw" [ngClass]="editColorMagic?'text-warning':'text-primary'"></i>
+  </a>
+  <div class="container">
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav   mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item  ">
+          <a class="nav-link" routerLink="/chat" routerLinkActive="active">ChatRoom
+          </a>
+        </li>
+
+        <li class="nav-item  ">
+          <a class="nav-link" href="#" *ngIf="(user|async)?.uid" routerLinkActive="active">Welcome , {{userEmail}}
+          </a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav  ml-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a *ngIf="!(user|async)?.uid" (click)="login()" class="nav-link" routerLink="/signin" routerLinkActive="active">Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="(user | async)?.uid" class="nav-link" href="#" (click)="logout()">logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

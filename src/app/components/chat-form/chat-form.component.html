@@ -1,0 +1,4 @@
+<input type="text" class="form-control chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event)">
+<button class="chatButton btn " (click)="send()">Send
+  <i class="fa fa-send-o fa-fw" aria-hidden="true"></i>
+</button>

@@ -1,0 +1,6 @@
+<div class="feed" style="background: url;background: url('../../assets/img/chatroom.jpg') center center no-repeat; background-size:cover;">
+
+  <div *ngFor="let msg of feed | async " class="message">
+    <app-message [chatMessag]="msg"></app-message>
+  </div>
+</div>

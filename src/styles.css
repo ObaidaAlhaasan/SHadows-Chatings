@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+.alert p{
+    padding: 0;margin: 0;font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100%; */
+}
+
+body{
+background: rgb(223, 222, 221);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+word-wrap: break-word;
+font-size: 1em;
+width: 100%;
+min-height: 100%;
+background: #eee;
+background-attachment: fixed;
+background-size: cover;
+
+}
+
+app-chatroom{
+    display: flex;
+    flex-direction: column;
+}
+
+app-navbar{
+    width: 100%;
+}
+
+app-chat-form{
+    width: 100%;
+    display: flex;
+    white-space: nowrap;
+    overflow: none;
+}
+
+.message{
+    display: block;
+    height: auto;
+}
